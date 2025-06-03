@@ -3,22 +3,36 @@ from openai import OpenAI
 
 import typer
 from pathlib import Path
-from typing import Optional
+from typing import Optional, List
 from pydantic import BaseModel, Field
+# import os  
+# from dotenv import load_dotenv
+# load_dotenv(dotenv_path='/gpfs/mindphidata/watersm/Projects/LLM/notebooks/.env',verbose=True)  # Throws error if it can't find .env file
+# openai_api_key=os.getenv("openai_api_key")
 
 app = typer.Typer()
 
 # Define a Pydantic schema for the structured output
+class SampleSummary(BaseModel):
+    sample_id: str = Field(..., alias="cBioPortal Sample ID", description="cBioPortal Sample ID, beginning with 'P-'")
 class CaseSummary(BaseModel):
-    clinical_context: str = Field(..., alias="Clinical context")
-    clinical_timeline: str = Field(..., alias="Clinical timeline")
-    molecular_profile: str = Field(..., alias="Molecular profile")
-    study_context: str = Field(..., alias="Study context")
-    patient_in_study: str = Field(..., alias="Patient in study")
-    scientific_implications: str = Field(..., alias="Scientific implications")
-    # TODO;
-    # mutational signatures
-    # methylation CIMP!
+    patient_id: str = Field(..., alias="cBioPortal Patient ID", description="cBioPortal Patient ID, beginning with 'P-'")
+    sample_ids: List[SampleSummary]
+    sample_ids: str= Field(..., alias="cBioPortal Sample ID List", description="List of sequenced cBioPortal Sample IDs, beginning with 'P-'")
+    clinical_context: str = Field(..., alias="Clinical context", description="A short overview of the patient and disease.")
+    clinical_timeline: str = Field(..., alias="Clinical timeline", description="A short overview of treatments, surgery, and recurrences.")
+    molecular_profile: str = Field(..., alias="Molecular profile", description="What mutations were seen, OncoKB levels, and interpretation.")
+    study_context: str = Field(..., alias="Study context", description="Study context")
+    patient_in_study: str = Field(..., alias="Patient in study", description="Describe how the patient fits into the cohort")
+    scientific_implications: str = Field(..., alias="Scientific implications", description="Explain what this case illustrates biologically or clinically. ")
+    resistance_mechanisms: str = Field(..., alias="Mechanisms of resistance", description="Explain potential mechanisms of resistance")
+    diagnosis_history: str =  Field(..., alias="Diagnosis history", description="Describe the diagnosis history of the patient")
+    mutational_signatures: str = Field(..., alias="Mutational signatures", description="Infer any COSMIC mutational signatures the patient might have")
+    epigenomic_remodeling: str = Field(..., alias="Methylation", description="Summary of methylation data, truncal mutations, potential clonal selection, and/or epigenomic remodeling (e.g. G-CIMP erosion) if relevant")
+    treatment_history: str =  Field(..., alias="Treatment history", description="Describe the treatment history of the patient")
+    treatment_recommendation: str = Field(..., alias="Treatment recommendation", description="Based on the patient treatment history, diagnosis history, and molecular profile with mutation information, suggest the most-likely beneficial next treatment for the patient based on your knowledge.")
+    clinical_trial_recommendation: str = Field(..., alias="Clinical trial recommendation", description="Based on the patient treatment history, diagnosis history, and molecular profile with mutation information, suggest any clinical trial the patient might be eligible for based on your knowledge.")
+
 
     class Config:
         allow_population_by_field_name = True
