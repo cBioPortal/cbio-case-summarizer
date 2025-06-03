@@ -16,6 +16,9 @@ class CaseSummary(BaseModel):
     study_context: str = Field(..., alias="Study context")
     patient_in_study: str = Field(..., alias="Patient in study")
     scientific_implications: str = Field(..., alias="Scientific implications")
+    # TODO;
+    # mutational signatures
+    # methylation CIMP!
 
     class Config:
         allow_population_by_field_name = True
