@@ -1,26 +1,8 @@
-
-⚠️ Failed to parse model output. Raw output:
-
-```json
 {
-  "ClinicalContext": {
-    "Overview": "Patient P04 is a male diagnosed with astrocytoma at age 22. He had an overall survival of 61 months and is deceased."
-  },
-  "ClinicalTimeline": {
-    "Overview": "P04 underwent initial surgery for astrocytoma (grade II), followed by three recurrences treated with surgeries for anaplastic astrocytoma (grade III). He received radiation therapy and temozolomide (TMZ) chemotherapy after the first recurrence and additional TMZ after the second recurrence. Radiographic progression was noted at multiple points before his death."
-  },
-  "MolecularProfile": {
-    "Mutations": "IDH1 R132C and TP53 R248Q mutations were identified. IDH1 R132C is classified as oncogenic with OncoKB level 1, indicating a high level of clinical evidence. TP53 R248Q is likely oncogenic.",
-    "Interpretation": "The presence of IDH1 R132C suggests a glioma subtype with potential therapeutic implications. TP53 mutation may contribute to tumor progression."
-  },
-  "StudyContext": {
-    "Overview": "The study investigates the molecular and clinical evolution of gliomas, focusing on the impact of IDH1 mutations and treatment responses over time. It contributes to understanding tumor progression and resistance mechanisms in glioma."
-  },
-  "PatientInStudy": {
-    "CohortFit": "Patient P04 represents a typical case of IDH1-mutant astrocytoma progressing to anaplastic astrocytoma within the cohort, illustrating the clinical course and molecular changes associated with this glioma subtype."
-  },
-  "ScientificImplications": {
-    "BiologicalClinicalIllustration": "P04's case highlights the role of IDH1 and TP53 mutations in glioma progression. The consistent presence of IDH1 R132C across samples suggests it as a truncal mutation, while TP53 mutation may indicate clonal selection during recurrence. The case underscores the challenges of therapeutic resistance and tumor evolution in IDH1-mutant gliomas, with implications for treatment strategies targeting these mutations."
-  }
+  "Clinical context": "Patient P04 is a 22-year-old male diagnosed with astrocytoma, a type of glioma, which is a cancer of the brain. He survived for 61 months after diagnosis before passing away.",
+  "Clinical timeline": "The patient underwent initial surgery for astrocytoma (Grade II) and experienced three recurrences, all classified as anaplastic astrocytoma (Grade III). He received radiation therapy and multiple courses of temozolomide (TMZ) chemotherapy. Radiographic progression was noted at 432, 1065, and 1282 days post-diagnosis.",
+  "Molecular profile": "Patient P04's tumor harbored IDH1 R132C and TP53 R248Q mutations. The IDH1 mutation is classified as oncogenic with OncoKB level 1 significance, indicating a well-established role in cancer. TP53 mutation is likely oncogenic. The tumor maintained an intact 1p/19q status and had low tumor mutational burden (TMB).",
+  "Study context": "The study focuses on the genomic and clinical evolution of gliomas, particularly the role of IDH1 mutations and other genetic alterations in tumor progression and treatment resistance. It contributes to understanding the molecular underpinnings of glioma progression and therapeutic responses.",
+  "Patient in study": "Patient P04 is part of a cohort analyzed for molecular changes over time, providing insights into the progression from low-grade astrocytoma to anaplastic astrocytoma, and the impact of IDH1 and TP53 mutations on disease trajectory.",
+  "Scientific implications": "This case illustrates the role of IDH1 R132C as a truncal mutation in glioma, contributing to tumorigenesis and progression. The consistent presence of IDH1 and TP53 mutations across recurrences suggests clonal selection. The study highlights potential mechanisms of resistance to TMZ, possibly linked to the intact 1p/19q status and low TMB, and underscores the importance of monitoring molecular changes for therapeutic strategies."
 }
-```
