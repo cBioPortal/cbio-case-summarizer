@@ -44,12 +44,6 @@ Molecular profile: What mutations were seen, OncoKB levels, and interpretation.
 Study context: What is this study about and what is its scientific contribution?
 Patient in study: How does patient P04 fit into the cohort?
 Scientific implications: Explain what this case illustrates biologically or clinically. Include mechanisms of resistance, tumor evolution, mutational signatures (e.g. COSMIC TMZ induced signature 11), epigenomic remodeling if relevant. Highlight the role of truncal mutations, potential clonal selection, and/or epigenomic remodeling (e.g. G-CIMP erosion) if relevant. Keep it succinct but try to answer each.
-
-Return your output as JSON matching the following schema exactly:
-
-```json
-{SCHEMA_JSON}
-```
 """
 
 @app.command()
@@ -84,46 +78,19 @@ def summarize(
         f"### {name}\n{content[:3000]}..." for name, content in files.items()
     )
 
-    # Query OpenAI
-    response = client.chat.completions.create(model=model,
-    messages=[
-        {"role": "system", "content": "You are a scientific summarizer."},
-        {"role": "user", "content": full_prompt}
-    ],
-    temperature=0.3)
-
-    output = response.choices[0].message.content
-    try:
-        # strip triple backtick fences if present
-        raw = output.strip()
-        if raw.startswith("```"):
-            # remove opening and closing fences
-            raw = raw.split("\n", 1)[1].rsplit("\n```", 1)[0]
-        # parse JSON to dict then to Pydantic model
-        # handle case where LLM echoes the JSON schema first
-        # split on double-newline: schema block, then actual output
-        blocks = raw.split("\n\n", 1)
-        body = blocks[1] if len(blocks) > 1 and ("properties" in blocks[0] and "required" in blocks[0]) else raw
-        data = json.loads(body)
-        # flatten nested JSON to match CaseSummary aliases
-        flat = {
-            "Clinical context": data.get("ClinicalContext", {}).get("Overview", ""),
-            "Clinical timeline": data.get("ClinicalTimeline", {}).get("Overview", ""),
-            "Molecular profile": " ".join([
-                data.get("MolecularProfile", {}).get("Mutations", ""),
-                data.get("MolecularProfile", {}).get("Interpretation", "")
-            ]).strip(),
-            "Study context": data.get("StudyContext", {}).get("Overview", ""),
-            "Patient in study": data.get("PatientInStudy", {}).get("CohortFit", ""),
-            "Scientific implications": data.get("ScientificImplications", {}).get("BiologicalClinicalIllustration", "")
-        }
-        parsed = CaseSummary.parse_obj(flat)
-    except Exception as e:
-        typer.echo("\n⚠️ Failed to parse model output. Raw output:\n")
-        print(output)
-        raise typer.Exit(code=1)
-
-    typer.echo(json.dumps(parsed.dict(), indent=2))
+    # Query OpenAI with structured output parsing
+    response = client.beta.chat.completions.parse(
+        model=model,
+        messages=[
+            {"role": "system", "content": "You are a scientific summarizer."},
+            {"role": "user", "content": full_prompt}
+        ],
+        response_format=CaseSummary,
+        temperature=0.3
+    )
+    # parsed is a CaseSummary instance
+    parsed: CaseSummary = response.choices[0].message.parsed
+    typer.echo(parsed.json(indent=2, by_alias=True))
 
 if __name__ == "__main__":
     app()
