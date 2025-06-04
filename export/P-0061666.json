@@ -1,0 +1,17 @@
+{
+  "cBioPortal Patient ID": "P-0061666",
+  "cBioPortal Sample ID List": "P-0061666-T01-IM7, P-0061666-T03-IM7",
+  "Clinical context": "Patient P-0061666 is a 63-year-old female with a history of metastatic adenocarcinoma of the transverse colon and infiltrating duct carcinoma of the breast.",
+  "Clinical timeline": "The patient was initially diagnosed with stage 4 adenocarcinoma of the transverse colon with metastases to the liver and lymph nodes. She has undergone multiple treatments including chemotherapy with fluorouracil and irinotecan, and biologic therapy with bevacizumab. Surgical procedures were performed at various points during her treatment course.",
+  "Molecular profile": "The patient harbors several mutations including TP53 (V274D, W91*), APC (E1309Dfs*4), and others in IGF1R, FLCN, SOX17, GLI1, CREBBP, NTRK1, and RAC1. TP53 mutations are likely oncogenic according to OncoKB.",
+  "Patient in study": "Patient P-0061666 is part of a cohort study using the MSK-CHORD dataset, which integrates clinical and genomic data to improve cancer outcome predictions.",
+  "Scientific implications": "This case illustrates the complexity of cancer treatment in the presence of multiple oncogenic mutations and highlights the importance of integrating genomic data for personalized treatment strategies. The presence of TP53 mutations suggests potential resistance mechanisms and tumor evolution dynamics.",
+  "Mechanisms of resistance": "Potential resistance mechanisms include the presence of TP53 mutations, which are known to confer resistance to certain chemotherapies and may influence tumor evolution.",
+  "Diagnosis history": "The patient was diagnosed with stage 4 adenocarcinoma of the transverse colon and stage 1-3 infiltrating duct carcinoma of the breast, with metastases to the liver and lymph nodes.",
+  "Mutational signatures": "The presence of TP53 mutations may suggest a mutational signature associated with genomic instability.",
+  "Methylation": "No specific methylation data or epigenomic remodeling events such as G-CIMP erosion were noted.",
+  "Treatment history": "The patient received chemotherapy with fluorouracil and irinotecan, biologic therapy with bevacizumab, and underwent multiple surgeries.",
+  "Summary": "Patient P-0061666 is a 63-year-old female with metastatic adenocarcinoma of the transverse colon and breast cancer, treated with chemotherapy, biologics, and surgery. She harbors TP53 and APC mutations, with TP53 being likely oncogenic. The patient is part of the MSK-CHORD study, which integrates clinical and genomic data for cancer outcome prediction. This case highlights the complexity of treatment in the presence of multiple mutations and potential resistance mechanisms.",
+  "Treatment recommendation": "Considering the presence of TP53 mutations and prior treatment history, exploring targeted therapies or clinical trials focusing on TP53 inhibitors may be beneficial.",
+  "Clinical trial recommendation": "The patient might be eligible for clinical trials investigating novel TP53 inhibitors or combination therapies targeting multiple pathways involved in her cancer."
+}

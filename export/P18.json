@@ -1,0 +1,17 @@
+{
+  "cBioPortal Patient ID": "P-18",
+  "cBioPortal Sample ID List": "P18_Pri_A, P18_Pri_B, P18_Pri_C, P18_Pri_D, P18_Rec",
+  "Clinical context": "Patient P-18 was initially diagnosed with an oligodendroglioma (OA II) and later experienced a recurrence as glioblastoma multiforme (GBM).",
+  "Clinical timeline": "The patient underwent initial surgery for OA II and received TMZ chemotherapy. A recurrence occurred, leading to a second surgery for GBM.",
+  "Molecular profile": "The patient had BRAF V600E and IDH1 R132H mutations, with BRAF being a level 1 oncogenic mutation according to OncoKB.",
+  "Patient in study": "This patient was part of a study examining the evolution of recurrent gliomas, highlighting differences in mutational profiles between initial and recurrent tumors.",
+  "Scientific implications": "This case illustrates the potential for significant genomic evolution between primary and recurrent gliomas, impacting treatment strategies.",
+  "Mechanisms of resistance": "The presence of BRAF V600E may confer resistance to certain therapies, necessitating alternative treatment approaches.",
+  "Diagnosis history": "Initially diagnosed with oligodendroglioma (OA II), later recurring as glioblastoma multiforme (GBM).",
+  "Mutational signatures": "The presence of IDH1 R132H suggests a potential signature associated with glioma.",
+  "Methylation": "No specific methylation data provided, but IDH1 mutations can be associated with methylation changes.",
+  "Treatment history": "The patient received TMZ chemotherapy following the initial diagnosis and surgery for OA II.",
+  "Summary": "Patient P-18 was initially diagnosed with oligodendroglioma and treated with TMZ chemotherapy. The tumor recurred as glioblastoma multiforme, leading to a second surgery. Molecular analysis revealed BRAF V600E and IDH1 R132H mutations, with significant genomic evolution noted between the initial and recurrent tumors. This case highlights the need for tailored treatment strategies in recurrent gliomas due to distinct mutational profiles.",
+  "Treatment recommendation": "Consideration of targeted therapies against BRAF V600E, such as BRAF inhibitors, may be beneficial given the mutation profile.",
+  "Clinical trial recommendation": "Enrollment in a clinical trial targeting BRAF V600E mutations in gliomas could be considered, if available."
+}
