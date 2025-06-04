@@ -5,10 +5,7 @@ import typer
 from pathlib import Path
 from typing import Optional, List
 from pydantic import BaseModel, Field
-# import os  
-# from dotenv import load_dotenv
-# load_dotenv(dotenv_path='/gpfs/mindphidata/watersm/Projects/LLM/notebooks/.env',verbose=True)  # Throws error if it can't find .env file
-# openai_api_key=os.getenv("openai_api_key")
+import os  
 
 app = typer.Typer()
 
