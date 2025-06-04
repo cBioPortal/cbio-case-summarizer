@@ -1,8 +1,17 @@
 {
-  "Clinical context": "Patient P04 is a 22-year-old male diagnosed with astrocytoma, a type of glioma, which is a cancer of the brain. He survived for 61 months after diagnosis before passing away.",
-  "Clinical timeline": "The patient underwent initial surgery for astrocytoma (Grade II) and experienced three recurrences, all classified as anaplastic astrocytoma (Grade III). He received radiation therapy and multiple courses of temozolomide (TMZ) chemotherapy. Radiographic progression was noted at 432, 1065, and 1282 days post-diagnosis.",
-  "Molecular profile": "Patient P04's tumor harbored IDH1 R132C and TP53 R248Q mutations. The IDH1 mutation is classified as oncogenic with OncoKB level 1 significance, indicating a well-established role in cancer. TP53 mutation is likely oncogenic. The tumor maintained an intact 1p/19q status and had low tumor mutational burden (TMB).",
-  "Study context": "The study focuses on the genomic and clinical evolution of gliomas, particularly the role of IDH1 mutations and other genetic alterations in tumor progression and treatment resistance. It contributes to understanding the molecular underpinnings of glioma progression and therapeutic responses.",
-  "Patient in study": "Patient P04 is part of a cohort analyzed for molecular changes over time, providing insights into the progression from low-grade astrocytoma to anaplastic astrocytoma, and the impact of IDH1 and TP53 mutations on disease trajectory.",
-  "Scientific implications": "This case illustrates the role of IDH1 R132C as a truncal mutation in glioma, contributing to tumorigenesis and progression. The consistent presence of IDH1 and TP53 mutations across recurrences suggests clonal selection. The study highlights potential mechanisms of resistance to TMZ, possibly linked to the intact 1p/19q status and low TMB, and underscores the importance of monitoring molecular changes for therapeutic strategies."
+  "cBioPortal Patient ID": "P04",
+  "cBioPortal Sample ID List": "P04_Pri, P04_Rec1, P04_Rec2, P04_Rec3",
+  "Clinical context": "Patient P04 is a 22-year-old male diagnosed with astrocytoma, a type of glioma, who survived for 61 months post-diagnosis.",
+  "Clinical timeline": "Initial diagnosis of astrocytoma (Grade II) followed by three recurrences as anaplastic astrocytoma (Grade III). Underwent surgeries at each recurrence and received TMZ chemotherapy and radiation therapy.",
+  "Molecular profile": "Mutations in IDH1 (R132C) and TP53 (R248Q) were detected. IDH1 mutation is oncogenic with OncoKB level 1, indicating a significant role in tumor biology.",
+  "Study context": "The study investigates the molecular evolution and treatment responses in glioma patients, focusing on genetic and epigenetic changes over time.",
+  "Patient in study": "Patient P04 exemplifies a case of glioma with multiple recurrences and provides insights into tumor evolution and resistance mechanisms.",
+  "Scientific implications": "This case illustrates the persistence of IDH1 mutation across recurrences, suggesting its role as a truncal mutation. The consistent presence of TP53 mutation indicates potential clonal selection. The low TMB suggests limited neoantigen formation, possibly affecting immune evasion.",
+  "Mechanisms of resistance": "Potential resistance mechanisms include clonal evolution and selection of resistant subclones harboring IDH1 and TP53 mutations.",
+  "Diagnosis history": "Initially diagnosed with Grade II astrocytoma, progressed to Grade III anaplastic astrocytoma upon recurrence.",
+  "Mutational signatures": "The presence of IDH1 mutation suggests a potential association with COSMIC signature 11, related to temozolomide treatment.",
+  "Methylation": "MGMT methylation status is unknown, which could influence TMZ treatment efficacy. No evidence of G-CIMP erosion is noted.",
+  "Treatment history": "Received TMZ chemotherapy and radiation therapy post-initial diagnosis and during recurrences.",
+  "Treatment recommendation": "Consideration of alternative alkylating agents or clinical trials targeting IDH1 mutations could be beneficial.",
+  "Clinical trial recommendation": "Enrollment in trials targeting IDH1 mutations or exploring novel agents for recurrent gliomas could be considered."
 }
