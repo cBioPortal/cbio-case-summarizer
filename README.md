@@ -15,6 +15,13 @@ poetry run summarize-case --model gpt-4o --openai-api-key YOUR_OPENAPI_KEY data/
 
 Currently only generates data for one case
 
+## Upload exported files
+Currently manual upload via surge.sh (Ino's account):
+
+```
+cd export && surge .
+```
+
 ## TODO
 - [ ] Use cBioPortal datahub directly (rather than files downloaded per case)
 - [ ] Add Deployment Preview for frontend
